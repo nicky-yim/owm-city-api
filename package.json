@@ -1,0 +1,26 @@
+{
+  "name": "owm-city-api",
+  "version": "1.0.0",
+  "description": "An API to search cities by name for the OpenWeatherMap API",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "develop": "nodemon app.js"
+  },
+  "keywords": [
+    "OpenWeatherMap",
+    "owm",
+    "city",
+    "cities",
+    "state",
+    "country",
+    "weather"
+  ],
+  "author": "Nicky Yim",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fuse.js": "^5.1.0",
+    "gunzip-file": "^0.1.1"
+  },
+  "license": "MIT"
+}
