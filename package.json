@@ -4,7 +4,7 @@
   "description": "An API to search cities by name for the OpenWeatherMap API",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "npm run develop",
     "develop": "nodemon app.js"
   },
   "keywords": [

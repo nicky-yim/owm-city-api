@@ -1,18 +1,24 @@
 const express = require('express');
 const fs = require('fs');
+const Fuse = require('fuse.js');
 const app = express();
 
 const PORT = 3000;
 const PATH = './city.list.min.json';
-let cities;
+var cities;
 
-fs.readFile(PATH, (err, data) => {
-  if (err) throw err;
-  cities = JSON.parse(data);
-});
+const buildCities = () => {
+  fs.promises
+    .readFile(PATH, (err, data) => {
+      if (err) throw err;
+      return data;
+    })
+    .then((data) => (cities = JSON.parse(data)));
+};
+buildCities();
 
-app.get('/', (req, res) => {
-  res.send(cities[0].name);
+app.get('/search/:query', (req, res) => {
+  res.send(req.params);
 });
 
 app.get('*', (req, res) => {
