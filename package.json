@@ -19,7 +19,6 @@
   "author": "Nicky Yim",
   "dependencies": {
     "express": "^4.17.1",
-    "fuse.js": "^5.1.0",
     "gunzip-file": "^0.1.1"
   },
   "license": "MIT"
