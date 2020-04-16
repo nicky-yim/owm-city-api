@@ -18,6 +18,7 @@
   ],
   "author": "Nicky Yim",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "gunzip-file": "^0.1.1"
   },
